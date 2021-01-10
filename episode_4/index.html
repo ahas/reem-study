@@ -7,7 +7,7 @@
                 position: relative;
                 width: 480px;
                 height: 800px;
-                background-color: red;
+                border: 1px solid black;
             }
 
             .action-bar {
@@ -63,12 +63,61 @@
             }
 
             .chat-bar table td:nth-child(1) {
-                width: 85%;
+                width: 80%;
             }
 
             .chat-bar input {
                 width: 100%;
+                padding: 10px;
             }
+
+            .chat-bar button {
+                padding: 10px 20px;
+                border: solid 1px  #10a4e8;
+                background-color: white;
+            }
+
+            .talk {
+                width: 100%;
+                position: absolute;
+                top: 80px;
+                bottom: 50px;
+            }
+
+            .msg {
+                margin: 10px;
+            }
+
+            .talk .msg .content {
+                display: inline-block;
+                color: white;
+                background-color:  #10a4e8;
+                padding: 10px;
+                border-radius: 5%;
+            }
+
+            .talk .msg .time {
+                color: black;
+                margin-top: 5px;
+            }
+
+            .msg.me {
+                margin: 10px;
+                text-align: right;
+            }
+
+            .talk .msg.me .content {
+                display: inline-block;
+                color: white;
+                background-color:  #3ca500;
+                padding: 10px;
+                border-radius: 5%;
+            }
+
+            .talk .msg.me .time {
+                color: black;
+                margin-top: 5px;
+            }            
         </style>
     </head>
     <body>
@@ -94,12 +143,22 @@
                     </tbody>
                 </table>
             </div>
+            <div class="talk">
+                <div class="msg">
+                    <div class="content">안녕 밥먹었냐?</div>
+                    <div class="time">12:00:00</div>
+                </div>
+                <div class="msg me">
+                    <div class="content">안녕 밥먹었냐?</div>
+                    <div class="time">12:00:00</div>
+                </div>                
+            </div>
             <div class="chat-bar">
                 <table>
                     <tbody>
                         <tr>
                             <td>
-                                <input />                          
+                                <input placeholder="메세지를 입력해주세요..." />                          
                             </td>
                             <td class="text-right">
                                 <button>전송</button>
