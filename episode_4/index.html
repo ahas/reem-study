@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>채팅 화면</title>
+        <script src="index.js"></script>
         <style>
             .screen {
                 position: relative;
@@ -82,6 +83,7 @@
                 position: absolute;
                 top: 80px;
                 bottom: 50px;
+                overflow: auto;
             }
 
             .msg {
@@ -117,7 +119,11 @@
             .talk .msg.me .time {
                 color: black;
                 margin-top: 5px;
-            }            
+            }   
+
+            .template {
+                display: none;
+            }         
         </style>
     </head>
     <body>
@@ -144,14 +150,16 @@
                 </table>
             </div>
             <div class="talk">
-                <div class="msg">
-                    <div class="content">안녕 밥먹었냐?</div>
-                    <div class="time">12:00:00</div>
+                <div class="template">
+                    <div class="msg">
+                        <div class="content">안녕 밥먹었냐?</div>
+                        <div class="time">12:00:00</div>
+                    </div>
+                    <div class="msg me">
+                        <div class="content">안녕 밥먹었냐?</div>
+                        <div class="time">12:00:00</div>
+                    </div>                
                 </div>
-                <div class="msg me">
-                    <div class="content">안녕 밥먹었냐?</div>
-                    <div class="time">12:00:00</div>
-                </div>                
             </div>
             <div class="chat-bar">
                 <table>
